@@ -1,0 +1,32 @@
+파일 구조 가이드라인
+
+프론트엔드는 client 디렉터리에 있으며
+하위 src 디렉터리에서 파일 구조를 확인할 수 있습니다.
+
+client/src/components :
+순수 DOM 마크업과 스타일 담당하는 파일이 포함됩니다.
+
+client/src/containers :
+데이터를 처리하고 정제해 props(프로퍼티)로 components에 전달하며
+상태 관리 툴 접근이나 API 호출을 하는 파일이 포함됩니다.
+
+백엔드는 server 디렉터리에 있으며 하위 src 디렉터리에서 파일 구조를 확인할 수 있습니다.
+
+server/src/routes :
+API 요청을 알맞은 controller 함수로 보내는 파일이 포함됩니다.
+
+server/src/middlewares :
+routes에서 controller 함수를 호출하기 전에 필요한 함수들을 저장합니다.
+예시로는 사용자 권한 확인, 에러 처리, 데이터 형식 체크하는 파일이 포함됩니다.
+
+server/src/controllers :
+service로부터 데이터를 요청하고 API 호출에 대한 응답을 위해
+데이터를 정제하는 파일이 포함됩니다.
+
+server/src/services :
+model로부터 요청된 데이터를 얻거나 쓰고,
+모델로 접근하기 전에 데이터가 모델에 맞는 형태인지
+validation을 하는 파일이 포함됩니다.
+
+server/src/models :
+schema를 정의하고 database에 접근해 데이터를 읽고 쓰는 파일이 포함됩니다.
